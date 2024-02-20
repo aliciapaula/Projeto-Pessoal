@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="midia/favicon_io (1)/favicon-32x32.png" type="image/x-icon">
+    <title>Login/Cadastro</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <span class="logoHeader">CINEVIBES</span>
+        <nav class="navHeader">
+            <a href="index.html" class="linkTopo">Home</a>
+            <a href="filmes.html" class="linkTopo">Filmes</a>
+        </nav>
+    </header>
+    <div class="login">
+        <form action="POST"class="formLogin">
+            <h1>Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <label for="password">Senha</label>
+            <input type="password" placeholder="Digite sua senha" />
+            <a href="esquecisenha.html">Esqueci minha senha</a>
+            <input type="submit" value="Entrar" class="btn" />
+            <br>
+            <br>
+            <p class="Cadastro">Não tem conta? <a href="cadastro.html">Cadastre - se</a></p>
+            <a href="https://accounts.google.com/">
+                <span id="google-signin">
+                    <img src="/midia/icons8-google-logo.svg" alt="">
+                    Login com Google
+                </span>
+            </a>
+        </form>
+    </div>
+    <footer class="footer">
+        <nav class="navFooter">
+            <a href="index.html" class="linkTopo">Home</a>
+            <a href="filmes.html" class="linkTopo">Filmes</a>
+        </nav>
+        &copy; 2023 CineVibes. Todos os direitos reservados.
+        <a href="#header" class="linkFooter"><span class="logoFooter">CINEVIBES</span></a>
+    </footer>
+</body>
+</html>

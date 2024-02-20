@@ -1,0 +1,483 @@
+*{  /* resetar a página */
+    margin: 0; /*define a área de margem nos quatro lados do elemento*/
+    padding: 0; /*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+    box-sizing: border-box; /*indica que o tamanho agora levará em conta até a borda */
+}
+body{ /*corpo*/
+    background-color: #4b4646; /*cor de fundo do corpo do site*/
+    color: white; /*cor das letras*/
+    font-family: Arial, sans-serif; /*fonte das letras*/
+}
+
+.header{ /*cabeçalho*/
+    background-color: #ee2e2e; /*cor de fundo do cabeçalho do site*/
+    height: 50px; /*largura do cabeçalho*/
+    width: 100%; /*altura do cabeçalho*/
+    color: white; /*cor das letras*/
+
+    display: flex; /*organização dos elementos*/
+    justify-content: space-between; /*espaço entre os elementos*/
+    align-items: center; /*alinhas os elementos centralizando*/
+    gap: 100px; /*espaço entre as linhas e colunas*/
+
+    position: fixed; /*posição do cabeçalho*/
+    top: 0; /*espaço acima do elemento*/
+    left: 0; /*define a posição em relação a borda da esquerda*/
+    z-index: 2; /*define a ordem dos elementos*/
+}
+
+.logoHeader{ /*logo do cabeçalho*/
+    font-weight: 700; /*especifica o peso ou a intensidade da fonte*/
+    margin: 25px; /*define a área de margem nos quatro lados do elemento*/
+    font-size: 30px; /*tamanho da letra*/
+}
+
+.search-container {  /*classe que guarda os elementos da barra de pesquisa*/
+    position: relative; /*posição do cabeçalho*/
+    display: flex; /*organização dos elementos*/
+    align-items: center; /*alinhas os elementos centralizando*/
+  }
+  
+.search-box { /*container da caixa da barra de pesquisa*/
+    border: none; /*aplica borda em um elemento*/
+    border-radius: 20px; /*aplica borda redonda em um elemento*/
+    padding: 8px; /*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+    font-size: 16px; /*tamanho da letra*/
+    width: 300px; /*altura do cabeçalho*/
+    outline: none;
+  }
+  
+.search-button { /*botão de pesquisa da barra de pesquisa*/
+    background-color:#4b4646; /*cor de fundo do botão da barra de pesquisa do site*/
+    color: #fff; /*cor das letras*/
+    border: none; /*aplica borda em um elemento*/
+    border-radius: 20px; /*aplica borda redonda em um elemento*/
+    padding: 10px 20px; /*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+    margin-left: -35px; /* para informar o espaçamento esquerdo. */
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Estilo para tornar a barra de pesquisa redonda */
+.search-box::placeholder { /*parte de dentro da barra de pesquisa*/
+    font-style: Arial, sans-serif; /*fonte das letras*/
+  }
+
+.navHeader { /*classe que guarda todos os elementos do cabeçalho*/
+    display: flex; /*organização dos elementos*/
+}
+
+.linkTopo { /*link dos elementos do cabeçalho*/
+    text-decoration: none; /*define a formatação do texto*/
+    position: relative; /*posição do cabeçalho*/
+    color: white; /*cor das letras*/
+    margin: 0 10px; /*define a área de margem nos quatro lados do elemento*/
+}
+
+.linkTopo:hover { /*efeito dos links dos elementos do cabeçalho*/
+    color: #4b4646; /* Altere a cor conforme necessário */
+}
+
+.linkTopo::after { /*efeito dos links dos elementos do cabeçalho*/
+    content: ""; /*define o conteúdo de um elemento*/
+    position: absolute; /*posição do cabeçalho*/
+    width: 100%; /*altura do cabeçalho*/
+    height: 2px; /*largura do cabeçalho*/
+    background-color: #4b4646; /*cor de fundo do risco dos elementos do cabeçalho do site*/
+    bottom: 0; /*definir a posição vertical do elemento em relação a sua borda inferior.*/
+    left: 0; /*define a posição em relação a borda da esquerda*/
+    transform: scaleX(0); /*permite modificar o espaço coordenado*/
+    transform-origin: bottom right; /*permite alterar a posição dos elementos transformados.*/
+    transition: transform 0.3s ease-out; /*alterar os valores das propriedades sem problemas, durante um determinado período*/
+}
+
+.linkTopo:hover::after { /*efeito dos links dos elementos do cabeçalho*/
+    transform: scaleX(1); /*permite modificar o espaço coordenado*/
+    transform-origin: bottom left; /*permite alterar a posição dos elementos transformados.*/
+}
+
+.apresentacao{ 
+    margin-top: 70px; /*espaço acima do elemento*/
+    text-align: center; /*alinha o texto no centro*/
+}
+
+.subtitle{
+    margin-left: 490px;
+}
+
+.container1{ /*parte que guarda todos os elementos do corpo da página*/
+    margin-top: 10px; /*espaço acima do elemento*/
+    padding: 20px; /* para informar o espaçamento esquerdo.*/
+}
+
+.container{
+    margin-top: 10px; /*espaço acima do elemento*/
+    margin-left: 5px; /* para informar o espaçamento esquerdo.*/
+}
+
+h1{ /*primeira frase da apresentação e deixa ela com a letra maior*/
+    margin-top: 60px; /*espaço acima do elemento*/
+    font-size: 35px; /*tamanho da letra*/
+}
+h2 { /*titulo do primeiro conteudo da página e deixa ela com a letra menor*/
+    font-size: 20px; /*tamanho da letra*/
+    margin-top: 30px; /*espaço acima do elemento*/
+}
+
+.mainContent{
+    display: grid; /*organização dos elementos*/
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "lista"
+                        "lista2"
+                        "lista3"
+                        "oscar"
+                        "globodeouro";
+}
+
+.lista {
+    display: flex; /*organização dos elementos*/
+    flex-direction: row;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 15px; /*espaço entre as linhas e colunas*/
+    grid-area: "lista";
+    margin-top: 18px; /*espaço acima do elemento*/
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.capa{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.desc{
+    display: flex;
+    gap: 15px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+p{
+    width: 1000px;
+    font-size: 16px;
+}
+
+.container3 {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+img {
+    max-width: 300px;
+    margin-right: 20px;
+}
+
+.svg {
+    margin-right: 20px;
+    max-width: 50px;
+}
+
+.lista::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.lista::-webkit-scrollbar-thumb {
+    background-color: #555; /* Cor do polegar da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas do polegar */
+}
+
+.lista::-webkit-scrollbar-track {
+    background-color: #333; /* Cor de fundo da pista da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas da pista */
+}
+
+.lista2 {
+    display: flex; /*organização dos elementos*/
+    flex-direction: row;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 15px; /*espaço entre as linhas e colunas*/
+    grid-area: "lista2";
+    margin-top: 15px; /*espaço acima do elemento*/
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.lista2::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.lista2::-webkit-scrollbar-thumb {
+    background-color: #555; /* Cor do polegar da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas do polegar */
+}
+
+.lista2::-webkit-scrollbar-track {
+    background-color: #333; /* Cor de fundo da pista da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas da pista */
+}
+
+.lista3 {
+    display: flex; /*organização dos elementos*/
+    flex-direction: row;
+    gap: 15px; /*espaço entre as linhas e colunas*/
+    grid-area: "lista3";
+    margin-top: 15px; /*espaço acima do elemento*/
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adicione um estilo básico para os cards */
+.Imgcard {
+    /* Estilos padrão do card sem seleção */
+    border: 2px solid transparent; /* Cor da borda quando não é selecionado */
+    transition: border-color 0.3s ease-in-out;
+}
+
+.Imgcard:hover {
+    /* Estilos do card selecionado */
+    border: 4px solid black; /* Cor da borda quando selecionado */
+}
+
+.oscar{
+    display: flex; /*organização dos elementos*/
+    flex-direction: row;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 15px; /*espaço entre as linhas e colunas*/
+    grid-area: "oscar";
+    margin-top: 18px; /*espaço acima do elemento*/
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.oscar::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.oscar::-webkit-scrollbar-thumb {
+    background-color: #555; /* Cor do polegar da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas do polegar */
+}
+
+.oscar::-webkit-scrollbar-track {
+    background-color: #333; /* Cor de fundo da pista da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas da pista */
+}
+
+.globodeouro{
+    display: flex; /*organização dos elementos*/
+    flex-direction: row;
+    overflow: scroll;
+    overflow-y: hidden;
+    gap: 15px; /*espaço entre as linhas e colunas*/
+    grid-area: "globodeouro";
+    margin-top: 18px; /*espaço acima do elemento*/
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.globodeouro::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.globodeouro::-webkit-scrollbar-thumb {
+    background-color: #555; /* Cor do polegar da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas do polegar */
+}
+
+.globodeouro::-webkit-scrollbar-track {
+    background-color: #333; /* Cor de fundo da pista da barra de rolagem */
+    border-radius: 10px; /* Bordas redondas da pista */
+}
+
+.globodeouro24{
+    display: flex; /*organização dos elementos*/
+    flex-direction: row;
+    overflow-y: hidden;
+    gap: 15px; /*espaço entre as linhas e colunas*/
+    grid-area: "globodeouro";
+    margin-top: 18px; /*espaço acima do elemento*/
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 15px; /*tamanho da letra*/
+}
+
+a { 
+    color:white; /*cor das letras*/
+}
+
+iframe{
+    border: none;
+}
+
+.footer { /*rodapé do site*/
+    background-color: #ee2e2e; /*cor de fundo do rodapé do site*/
+    height: 50px; /*largura do cabeçalho*/
+    color: white; /*cor das letras*/
+    display: flex; /*organização dos elementos*/
+    justify-content: space-between; /*espaço entre os elementos*/
+    align-items: center; /*alinhas os elementos centralizando*/
+    bottom: 0; /*definir a posição vertical do elemento em relação a sua borda inferior.*/
+    left: 0; /*define a posição em relação a borda da esquerda*/
+    width: 100%; /*altura do cabeçalho*/
+    text-align: center; /*alinha o texto no centro*/
+    padding: 8px 0; /*define uma a distância entre o conteúdo de um elemento e suas bordas.*/
+    margin-top: 100px; /*espaço acima do elemento*/
+    gap: 20px; /*espaço entre as linhas e colunas*/
+    position: fixed;
+}
+
+.navFooter{ /*organização dos elementos do rodapé do site*/
+    display: flex; /*organização dos elementos*/
+    flex-direction: row;
+    margin: 25px; /*define a área de margem nos quatro lados do elemento*/
+}
+
+.logoFooter{ /*logo no rodapé do site*/
+    font-weight: bold; /*especifica o peso ou a intensidade da fonte*/
+    margin: 25px; /*define a área de margem nos quatro lados do elemento*/
+    font-size: 30px; /*tamanho da letra*/
+    color: white; /*cor das letras*/
+}
+
+.linkFooter{ /*link do rodapé do site*/
+    text-decoration: none; /*define a formatação do texto*/
+}
+
+.linkFundo{ 
+    text-decoration: none; /*define a formatação do texto*/
+    color: white; /*cor das letras*/
+    font-size: 15px; /*tamanho da letra*/
+    font-weight: 700; /*especifica o peso ou a intensidade da fonte*/
+    margin-left: 15px; /* para informar o espaçamento esquerdo. */
+    padding-bottom: 3px; /*define a distância do elemento para sua própria borda*/
+}
+
+.copyrightText {
+    font-size: 15px; /* Defina o tamanho da fonte desejado, por exemplo, 12 pixels */
+    /* Adicione outros estilos conforme necessário */
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #4b4646;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  background-color: #4b4646;
+  border-radius: 7px;
+  padding: 40px;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+  gap: 5px;
+}
+
+.areaLogin img {
+  width: 420px;
+}
+
+.formLogin h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.3em;
+  margin-top: 15px;
+}
+
+.formLogin p {
+  display: inline-block;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.formLogin input {
+  padding: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+  transition: all linear 160ms;
+  outline: none;
+}
+
+
+.formLogin input:focus {
+  border: 1px solid #ee2e2e;
+}
+
+.formLogin label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#google-signin{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    background-color: #ee2e2e;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    border-radius: 4px;
+}
+
+.formLogin a {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: white;
+  transition: all linear 160ms;
+  text-decoration: none;
+}
+
+.formLogin a:hover {
+  color: #ee2e2e;
+}
+
+.btn {
+  background-color: #ee2e2e;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  transition: all linear 160ms;
+  cursor: pointer;
+  margin: 0 !important;
+
+}
+
+.btn:hover{
+  transform: scale(1.02);
+  background-color: #ee2e2e;
+}
+
+#google-signin:hover{
+    transform: scale(1.02);
+    background-color: #ee2e2e;
+}
